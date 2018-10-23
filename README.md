@@ -1,7 +1,8 @@
-##time conversion alfredworkflow是什么?
+## time conversion alfredworkflow是什么?
+
 基于PHP开发的alfredworkflow，用于`时间戳`和`格式化时间`的相互转换。
 
-##安装方法：
+## 安装方法：
 
 * 1.先安装[Alfred](https://www.alfredapp.com/)，已安装的直接第2步。
 * 2.git clone 或直接点击此处[下载](https://github.com/kangzhi2016/time-conversion-alfredworkflow/releases)

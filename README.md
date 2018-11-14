@@ -31,4 +31,4 @@
 
 当然，有钱捧个钱场，没钱捧个人场，谢谢各位。
 
-![](https://upload-images.jianshu.io/upload_images/2779581-7e20c11677ed4fff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+![](https://upload-images.jianshu.io/upload_images/2779581-7e20c11677ed4fff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/100)

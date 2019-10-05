@@ -5,7 +5,7 @@
 ## 安装方法：
 
 * 1.先安装[Alfred](https://www.alfredapp.com/)，已安装的直接第2步。
-* 2.git clone 或直接点击此处[下载](https://gitee.com/kangzhi2016/time-conversion-alfredworkflow/releases/0.2)
+* 2.git clone 或直接点击此处[下载](https://github.com/kangzhi2016/time-conversion-alfredworkflow/releases)
 * 3.下载完成后，解压，双击文件夹中的time conversion.alfredworkflow安装即可。
 
 ## 使用说明：

@@ -17,11 +17,11 @@ class Time{
 		    $this->workflows->result(1, $title, $title, $sub_title, 'icon.png');
 		    $this->workflows->result(2, $sub_title, $sub_title, $title, 'icon.png');
 		}else{
-		    $title = strtotime($string);	
-
-		    if($title == false){
-		    	$title = date('Y-m-d H:i:s', $string);
-		    }
+            if(is_numeric($string)){
+                $title = date('Y-m-d H:i:s', $string);
+            }else{
+                $title = strtotime($string);
+            }
 
 			$this->workflows->result(1, $title, $title, $string, 'icon.png'); 
 		}
@@ -29,7 +29,6 @@ class Time{
 		echo $this->workflows->toxml();
 	}
 }
-
 
 
 

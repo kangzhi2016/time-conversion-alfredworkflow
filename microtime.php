@@ -17,9 +17,7 @@ class Time{
 		    $this->workflows->result(1, $title, $title, $sub_title, 'icon.png');
 		    $this->workflows->result(2, $sub_title, $sub_title, $title, 'icon.png');
 		}else{
-		    $str = strstr($string, '-');
-
-		    if($str === false){
+		    if(is_numeric($string)){
 		    	$title = $this->getMsecToMescdate($string);
 		    }else{
 		    	$title = $this->getDateToMesc($string);

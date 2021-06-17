@@ -2,6 +2,8 @@
 
 基于PHP开发的alfredworkflow，用于`时间戳`和`格式化时间`的相互转换。
 
+[新工具，结合时间转换和变量转换](https://github.com/kangzhi2016/conversion-tools)
+
 ## 安装方法：
 
 * 1.先安装[Alfred](https://www.alfredapp.com/)，已安装的直接第2步。

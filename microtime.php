@@ -3,30 +3,25 @@
 require_once('workflows.php');
 
 class Time{
-	
-	function __construct() {
-		date_default_timezone_set('PRC');
-		$this->workflows = new Workflows();
-	}
 
 	public function getTime($string){
 		if(empty($string)){
 		    $title = $this->getMsecTime();
 		    $sub_title = $this->getMsecToMescdate($title);
 
-		    $this->workflows->result(1, $title, $title, $sub_title, 'icon.png');
-		    $this->workflows->result(2, $sub_title, $sub_title, $title, 'icon.png');
+		    set_result(1, $title, $title, $sub_title, 'icon.png');
+		    set_result(2, $sub_title, $sub_title, $title, 'icon.png');
 		}else{
-		    if(is_numeric($string)){
+		    if(is_numeric($string) && strlen($string) == 13){
 		    	$title = $this->getMsecToMescdate($string);
 		    }else{
 		    	$title = $this->getDateToMesc($string);
 		    }
 
-			$this->workflows->result(1, $title, $title, $string, 'icon.png'); 
+			set_result(1, $title, $title, $string, 'icon.png');
 		}
 
-		echo $this->workflows->toxml();
+		echo_result();
 	}
 
 	/**
@@ -35,8 +30,7 @@ class Time{
     public function getMsecTime()
     {
         list($msec, $sec) = explode(' ', microtime());
-        $msectime =  (float)sprintf('%.0f', (floatval($msec) + floatval($sec)) * 1000);
-        return $msectime;
+        return (float)sprintf('%.0f', (floatval($msec) + floatval($sec)) * 1000);
     }
  
     /**
@@ -46,7 +40,6 @@ class Time{
     {
         $msectime = $msectime * 0.001;
         if(strstr($msectime,'.')){
-            sprintf("%01.3f",$msectime);
             list($usec, $sec) = explode(".",$msectime);
             $sec = str_pad($sec,3,"0",STR_PAD_RIGHT);
         }else{
@@ -54,7 +47,7 @@ class Time{
             $sec = "000";
         }
         $date = date("Y-m-d H:i:s.x",$usec);
-        return $mescdate = str_replace('x', $sec, $date);
+        return str_replace('x', $sec, $date);
     }
  
     /**
@@ -64,8 +57,7 @@ class Time{
     {
         list($usec, $sec) = explode(".", $mescdate);
         $date = strtotime($usec);
-        $return_data = str_pad($date.$sec,13,"0",STR_PAD_RIGHT);
-        return $msectime = $return_data;
+        return str_pad($date.$sec,13,"0",STR_PAD_RIGHT);
     }
 }
 
